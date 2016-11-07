@@ -4,7 +4,6 @@ import unittest
 import tempfile
 
 class FlaskrTestCase(unittest.TestCase):
-
     def setUp(self):
         self.db_fd, flaskr.app.config['DATABASE'] = tempfile.mkstemp()
         flaskr.app.config['TESTING'] = True
