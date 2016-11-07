@@ -35,7 +35,7 @@ class FlaskrTestCase(unittest.TestCase):
         rv = self.login('admin', 'defaultx')
         assert 'Invalid password' in rv.data.decode()
 
-    def test_message(self):
+    def test_add_message(self):
         self.login('admin', 'default')
         rv = self.app.post('/add', data=dict(
             title='<Hello>',
